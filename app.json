@@ -8,8 +8,8 @@
     "scheme": "ezyPharma",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/logoX.png",
-      "resizeMode": "contain",
+      "image": "./assets/images/splash_screen.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "ios": {
