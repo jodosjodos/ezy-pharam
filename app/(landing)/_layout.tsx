@@ -6,6 +6,9 @@ export default function LandingLayout() {
             <Stack.Screen name="doctor" options={{
                 headerShown:false
             }}/>
+             <Stack.Screen name="location" options={{
+                headerShown:false
+            }}/>
         </Stack>
     )
 }
