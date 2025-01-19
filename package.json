@@ -19,6 +19,7 @@
     "@expo-google-fonts/kadwa": "^0.2.3",
     "@expo-google-fonts/kreon": "^0.2.3",
     "@expo-google-fonts/lekton": "^0.2.3",
+    "@expo-google-fonts/poppins": "^0.2.3",
     "@expo/cli": "^0.18.30",
     "@expo/vector-icons": "^14.0.2",
     "@react-native-async-storage/async-storage": "1.23.1",

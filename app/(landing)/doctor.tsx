@@ -29,7 +29,7 @@ export default function Index() {
           className="w-[70%] h-[70%]"
           source={images?.Doctor}
         />
-        <Text className="text-primary font-extrabold text-xl px-[20%]">
+        <Text className="text-primary font-poppins_bold text-xl px-[20%]">
           Get advice only from a doctor you believe in.
         </Text>
         <TouchableOpacity

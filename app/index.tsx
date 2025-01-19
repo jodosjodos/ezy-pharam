@@ -17,8 +17,8 @@ router.push("/(landing)/doctor")
           className="w-[70%] h-[70%]"
           source={images?.Woman}
         />
-        <Text className="text-primary font-extrabold text-xl px-[20%]">Find a lot of specialist doctors in one place</Text>
-        <TouchableOpacity onPress={handleNavigation} className=" bg-bg_primary py-[4%] px-[12%] rounded-lg mt-4"><Text className="text-white">Get Started</Text></TouchableOpacity>
+        <Text className="text-primary font-extrabold text-xl px-[20%] font-poppins_bold">Find a lot of specialist doctors in one place</Text>
+        <TouchableOpacity onPress={handleNavigation} className=" bg-bg_primary py-[4%] px-[15%] rounded-lg mt-4"><Text className="text-white">Get Started</Text></TouchableOpacity>
       </View>
     </SafeAreaView>
   );

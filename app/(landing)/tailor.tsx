@@ -39,14 +39,14 @@ export default function Tailor() {
         <Image
           resizeMethod="auto"
           resizeMode="contain"
-          className="w-[70%] h-[60%] "
+          className="w-[70%] h-[55%] "
           source={images?.Tailor}
         />
         <View className="flex flex-col items-center justify-center space-y-2">
-          <Text className="text-primary font-extrabold text-xl px-[20%]">
+          <Text className="text-primary font-poppins_bold text-xl px-[20%]">
             Tailor your experience
           </Text>
-          <Text className="text-[#A1A8B0] text-center px-[20%]">
+          <Text className="text-[#A1A8B0] text-center px-[20%] font-poppins_reg">
             To provide with good experience , please select your role below
           </Text>
           <RadioGroupComponent roles={roles}/>
