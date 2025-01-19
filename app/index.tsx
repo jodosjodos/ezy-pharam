@@ -1,6 +1,6 @@
 import { images } from "@/constants";
 import { Link, router } from "expo-router";
-import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -18,7 +18,7 @@ router.push("/(landing)/doctor")
           source={images?.Woman}
         />
         <Text className="text-primary font-extrabold text-xl px-[20%] font-poppins_bold">Find a lot of specialist doctors in one place</Text>
-        <TouchableOpacity onPress={handleNavigation} className=" bg-bg_primary py-[4%] px-[15%] rounded-lg mt-4"><Text className="text-white">Get Started</Text></TouchableOpacity>
+        <Pressable onPress={handleNavigation} className=" bg-bg_primary py-[4%] px-[15%] rounded-lg mt-4"><Text className="text-white">Get Started</Text></Pressable>
       </View>
     </SafeAreaView>
   );

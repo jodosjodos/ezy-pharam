@@ -1,6 +1,6 @@
 import { images } from "@/constants";
 import { Link, router } from "expo-router";
-import { Button, Image, Pressable, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { Button, Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { handleBack } from "@/utils";
@@ -26,7 +26,7 @@ export default function Index() {
         <Image
           resizeMethod="auto"
           resizeMode="contain"
-          className="w-[70%] h-[70%]"
+          className="w-[70%] h-[60%]"
           source={images?.Doctor}
         />
         <Text className="text-primary font-poppins_bold text-xl px-[20%]">

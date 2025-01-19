@@ -4,14 +4,12 @@ import {
   Image,
   Pressable,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { handleBack } from "@/utils";
-import RadioGroup from "@/components/Radio-Group";
 import RadioGroupComponent from "@/components/Radio-Group";
 export default function Tailor() {
   const roles = [
@@ -39,7 +37,7 @@ export default function Tailor() {
         <Image
           resizeMethod="auto"
           resizeMode="contain"
-          className="w-[70%] h-[55%] "
+          className="w-[70%] h-[57%] "
           source={images?.Tailor}
         />
         <View className="flex flex-col items-center justify-center space-y-2">

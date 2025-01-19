@@ -4,7 +4,6 @@ import {
   Image,
   Pressable,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -32,7 +31,7 @@ export default function Location() {
         <Image
           resizeMethod="auto"
           resizeMode="contain"
-          className="w-[60%] h-[50%] "
+          className="w-[60%] h-[55%] "
           source={images?.Location}
         />
         <View className=" flex flex-col items-center justify-center space-y-1">
