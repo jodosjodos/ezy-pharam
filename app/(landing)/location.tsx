@@ -1,20 +1,26 @@
 import { images } from "@/constants";
 import { Link, router } from "expo-router";
-import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, Text, Touchable, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
-export default function Index() {
+import { handleBack } from "@/utils";
+export default function Location() {
   const handleNavigation = () => {
-    router.push("/(landing)/doctor");
+    router.replace("/(landing)/tailor");
   };
   return (
     <SafeAreaView className="bg-white">
-      <Link
-        href="/(auth)/signup"
-        className="text-[#A1A8B0] self-end pr-[5%] text-md"
-      >
-        Skip
-      </Link>
+   <View className="flex flex-row justify-between items-center ">
+        <Pressable  onPress={handleBack} className="text-[#A1A8B0] self-start  text-xl">
+         <Image source={images?.Back} />
+        </Pressable>
+        <Link
+          href="/(auth)/signup"
+          className="text-[#A1A8B0]  pr-[5%] text-md"
+        >
+          Skip
+        </Link>
+      </View>
       <View className="h-full w-[100%] flex flex-col items-center justify-center ">
         <Image
           resizeMethod="auto"
