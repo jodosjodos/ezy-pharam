@@ -3,6 +3,7 @@ import React from 'react'
 
 const SignupPage = () => {
   return (
+    // start sign up
     <View>
       <Text>SignupPage</Text>
     </View>
