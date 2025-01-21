@@ -27,6 +27,12 @@ export default function LandingLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="newpassword"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }

@@ -5,4 +5,5 @@ import Back from "../assets/images/back.png"
 import Tailor from "../assets/images/tailor.png"
 import Pharma from "../assets/images/pharam.png"
 import Forgot from "../assets/images/forgot.png"
-export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot}
+import Done from "../assets/images/done.png"
+export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done}
