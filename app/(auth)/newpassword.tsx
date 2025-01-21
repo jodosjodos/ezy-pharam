@@ -20,7 +20,7 @@ const ResetPasswordPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  //TODO:not well , improve it
   const handlePasswordReset = () => {
     if (password === confirmPassword && password.length >= 8) {
       setSuccess(true);
