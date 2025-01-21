@@ -33,6 +33,7 @@ const SignupPage = () => {
       Alert.alert(`Don't know how to open this URL: ${url}`);
     }
   };
+  //TODO:style checkbox and  then add sign up button
   return (
     <SafeAreaView className="bg-white flex-1">
       <View className="flex flex-row">
