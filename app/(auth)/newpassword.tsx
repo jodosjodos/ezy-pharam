@@ -12,6 +12,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { router } from "expo-router";
+
 const ResetPasswordPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -30,17 +32,17 @@ const ResetPasswordPage = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <KeyboardAvoidingView behavior="padding" className="flex-1">
-        {!success ? (
-          <View className="flex-1 px-6">
-            {/* Header */}
-            <Pressable onPress={() => console.log("Back Pressed")}>
-              <Image source={images?.Back} />
-            </Pressable>
+        <View className="flex-1 px-6 relative">
+          {/* Header */}
+          <Pressable onPress={() => console.log("Back Pressed")}>
+            <Image source={images?.Back} />
+          </Pressable>
 
-            {/* Reset Password Form */}
+          {/* Reset Password Form */}
+          {!success ? (
             <View className="flex-1 justify-center space-y-9">
               <View>
-                <Text className="text-2xl font-poppins_bold text-primary  text-center">
+                <Text className="text-2xl font-poppins_bold text-primary text-center">
                   Reset Password?
                 </Text>
                 <Text className="text-base text-[#A1A8B0] font-poppins_reg text-center">
@@ -101,32 +103,36 @@ const ResetPasswordPage = () => {
                 onPress={handlePasswordReset}
                 className="bg_primary py-[4%] px-[28%] border border-bg_primary bg-bg_primary rounded-3xl mt-4"
               >
-                <Text className="text-white  font-poppins_bold text-center">
+                <Text className="text-white font-poppins_bold text-center">
                   Create Password
                 </Text>
               </Pressable>
             </View>
-          </View>
-        ) : (
-          // Success Screen
-          <View className="flex-1 justify-center items-center px-6">
-            <Image source={images?.Done} className="mb-6" />
-            <Text className="text-2xl font-poppins_bold text-primary mb-4 text-center">
-              Success
-            </Text>
-            <Text className="text-base text-[#A1A8B0] mb-6 text-center">
-              You have successfully reset your password.
-            </Text>
-            <Pressable
-              onPress={() => console.log("Navigate to Login")}
-              className="bg-primary py-4 px-8 rounded-lg"
-            >
-              <Text className="text-white text-center text-lg font-bold">
-                Login
-              </Text>
-            </Pressable>
-          </View>
-        )}
+          ) : (
+            <View className="flex-1 justify-center items-center px-6 py-5 bg-white">
+              <View className="bg-[#fff] rounded-3xl p-10 shadow-lg items-center">
+                <Image
+                  source={images?.Done}
+                  className="mb-6 w-[80px] h-[80px]"
+                />
+                <Text className="text-2xl font-poppins_bold text-primary mb-4 text-center">
+                  Success!
+                </Text>
+                <Text className=" text-[#6B7280] mb-6 font-poppins_reg text-center">
+                  You have successfully reset your password
+                </Text>
+                <Pressable
+                  onPress={() => router.push("/(auth)/login")}
+                  className="bg_primary py-[6%] px-[25%] border border-bg_primary bg-bg_primary rounded-3xl mt-4"
+                >
+                  <Text className="text-white  font-poppins_bold text-center">
+                    Login
+                  </Text>
+                </Pressable>
+              </View>
+            </View>
+          )}
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
