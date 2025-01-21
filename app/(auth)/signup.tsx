@@ -1,4 +1,13 @@
-import { View, Text, Pressable, Image, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  Linking,
+  Alert,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { handleBack } from "@/utils";
@@ -7,12 +16,23 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import CheckBox from "expo-checkbox";
+import { Link } from "expo-router";
 const SignupPage = () => {
   const [hospitalName, setHospitalName] = useState<string>("");
   const [email_phone, setEmail_phone] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [selected, setSelected] = useState<string>("email");
+  const [isSelected, setSelection] = useState(false);
+  const openExternalLink = async (url: string) => {
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      Alert.alert(`Don't know how to open this URL: ${url}`);
+    }
+  };
   return (
     <SafeAreaView className="bg-white flex-1">
       <View className="flex flex-row">
@@ -134,6 +154,36 @@ const SignupPage = () => {
             style={{ position: "absolute", zIndex: 9, right: "6%" }}
             onPress={() => setShowPassword(!showPassword)}
           />
+        </View>
+        <View>
+          <CheckBox
+            className="rounded-md w-[6%] h-[22%]"
+            disabled={false}
+            value={isSelected}
+            onValueChange={setSelection}
+          ></CheckBox>
+          <Text>
+            I agree to the healthcare{" "}
+            <Text
+              onPress={() =>
+                openExternalLink(
+                  "https://termly.io/resources/templates/terms-of-service-template/"
+                )
+              }
+            >
+              Terms of Service
+            </Text>{" "}
+            and{" "}
+            <Text
+              onPress={() =>
+                openExternalLink(
+                  "https://termly.io/resources/templates/privacy-policy-template/"
+                )
+              }
+            >
+              Privacy Policy
+            </Text>
+          </Text>
         </View>
       </View>
     </SafeAreaView>
