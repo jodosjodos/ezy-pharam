@@ -17,7 +17,8 @@ import Fontisto from "@expo/vector-icons/Fontisto";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import CheckBox from "expo-checkbox";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
+import AntDesign from "@expo/vector-icons/AntDesign";
 const SignupPage = () => {
   const [hospitalName, setHospitalName] = useState<string>("");
   const [email_phone, setEmail_phone] = useState<string>("");
@@ -156,16 +157,17 @@ const SignupPage = () => {
             onPress={() => setShowPassword(!showPassword)}
           />
         </View>
-        <View>
+        <View className="flex flex-row items-center space-x-[2%]">
           <CheckBox
-            className="rounded-md w-[6%] h-[22%]"
+            className="rounded-md "
             disabled={false}
             value={isSelected}
             onValueChange={setSelection}
           ></CheckBox>
-          <Text>
+          <Text className="font-poppins_reg">
             I agree to the healthcare{" "}
             <Text
+              className="text-bg_primary "
               onPress={() =>
                 openExternalLink(
                   "https://termly.io/resources/templates/terms-of-service-template/"
@@ -176,6 +178,7 @@ const SignupPage = () => {
             </Text>{" "}
             and{" "}
             <Text
+              className="text-bg_primary"
               onPress={() =>
                 openExternalLink(
                   "https://termly.io/resources/templates/privacy-policy-template/"
@@ -186,6 +189,29 @@ const SignupPage = () => {
             </Text>
           </Text>
         </View>
+        <Pressable
+          onPress={() => router.push("/(auth)/signup")}
+          className="bg_primary py-[4%] px-[28%] border border-bg_primary bg-bg_primary rounded-3xl mt-4"
+        >
+          <Text className="text-white  font-poppins_bold text-center">
+            Sign Up
+          </Text>
+        </Pressable>
+        <Text className="text-center font-poppins_reg">
+          Already have an account ?{" "}
+          <Link
+            href="/(auth)/login"
+            className="text-bg_primary font-poppins_reg"
+          >
+            Sign in
+          </Link>
+        </Text>
+        <Pressable className="flex flex-row items-center justify-center space-x-[5%] py-[4%] px-[28%] border border-[#E5E5E5] rounded-md mt-4">
+          <AntDesign name="google" size={24} color="black" />
+          <Text className="text-center font-poppins_bold text-primary">
+            Sign In with Google
+          </Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
