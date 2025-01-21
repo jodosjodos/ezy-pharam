@@ -126,7 +126,7 @@ const ResetPasswordPage = () => {
                   className="bg_primary py-[6%] px-[25%] border border-bg_primary bg-bg_primary rounded-3xl mt-4"
                 >
                   <Text className="text-white  font-poppins_bold text-center">
-                    Login
+                    Sign In
                   </Text>
                 </Pressable>
               </View>
