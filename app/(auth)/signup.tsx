@@ -208,7 +208,7 @@ const SignupPage = () => {
             Already have an account ?{" "}
             <Link
               href="/(auth)/login"
-              className="text-bg_primary font-poppins_reg"
+              className="text-bg_primary font-poppins_bold"
             >
               Sign in
             </Link>

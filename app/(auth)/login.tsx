@@ -50,7 +50,6 @@ const LoginPage = () => {
 
       <View className="flex flex-col  justify-evenly  h-full px-[5%]">
         <View className="flex flex-col space-y-[7%]">
-       
           <View className="flex flex-row items-center">
             <Pressable
               className={`flex-1 flex-row  items-center py-[3.5%] font-poppins_reg border border-stroke-10 bg-[#F9FAFB]  rounded-md text-stroke-40 px-[5%] space-x-[7%] ${
@@ -119,32 +118,37 @@ const LoginPage = () => {
                   : "Enter your phone number"
               }
               value={email_phone}
-              keyboardType={selected === "email" ? "email-address" : "phone-pad"}
+              keyboardType={
+                selected === "email" ? "email-address" : "phone-pad"
+              }
               onChangeText={setEmail_phone}
             />
           </View>
-          <View className="flex flex-row items-center ">
-            <Feather
-              name="lock"
-              size={24}
-              color="rgba(34, 31, 31, 0.4)"
-              style={{ position: "absolute", zIndex: 9, left: "6%" }}
-            />
-            <TextInput
-              className="flex-1 font-poppins_reg border border-stroke-10 bg-[#F9FAFB] p-[3.5%] placeholder:text-start px-[15%] rounded-md text-stroke-40"
-              placeholder="Enter your password"
-              value={password}
-              onChangeText={setPassword}
-              secureTextEntry={!showPassword}
-              keyboardType="default"
-            />
-            <FontAwesome
-              name={showPassword ? "eye" : "eye-slash"}
-              size={24}
-              color="rgba(34, 31, 31, 0.4)"
-              style={{ position: "absolute", zIndex: 9, right: "6%" }}
-              onPress={() => setShowPassword(!showPassword)}
-            />
+          <View className="flex flex-col space-y-2">
+            <View className="flex flex-row items-center ">
+              <Feather
+                name="lock"
+                size={24}
+                color="rgba(34, 31, 31, 0.4)"
+                style={{ position: "absolute", zIndex: 9, left: "6%" }}
+              />
+              <TextInput
+                className="flex-1 font-poppins_reg border border-stroke-10 bg-[#F9FAFB] p-[3.5%] placeholder:text-start px-[15%] rounded-md text-stroke-40"
+                placeholder="Enter your password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry={!showPassword}
+                keyboardType="default"
+              />
+              <FontAwesome
+                name={showPassword ? "eye" : "eye-slash"}
+                size={24}
+                color="rgba(34, 31, 31, 0.4)"
+                style={{ position: "absolute", zIndex: 9, right: "6%" }}
+                onPress={() => setShowPassword(!showPassword)}
+              />
+            </View>
+            <Text className="font-poppins_req text-bg_primary self-end " onPress={()=>router.push("/(auth)/forgot")}>Forgot Password ?</Text>
           </View>
         </View>
         <View className="flex flex-row items-center space-x-[3%] px-[2%]">
@@ -192,7 +196,7 @@ const LoginPage = () => {
             Already have an account ?{" "}
             <Link
               href="/(auth)/signup"
-              className="text-bg_primary font-poppins_reg"
+              className="text-bg_primary font-poppins_bold"
             >
               Sign up
             </Link>

@@ -15,6 +15,12 @@ export default function LandingLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="forgot"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
