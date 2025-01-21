@@ -2,7 +2,7 @@ import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "@/constants";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { handleBack } from "@/utils";
 
 const GetStarted = () => {
@@ -32,13 +32,13 @@ const GetStarted = () => {
         </View>
         <View>
           <Pressable
-            onPress={() => {}}
+            onPress={() => router.push("/(auth)/login")}
             className=" bg-bg_primary py-[4%] px-[28%] rounded-3xl mt-4"
           >
             <Text className="text-white font-poppins_reg">Login</Text>
           </Pressable>
           <Pressable
-            onPress={() => {}}
+            onPress={() => router.push("/(auth)/signup")}
             className="bg-white py-[4%] px-[28%] border border-bg_primary rounded-3xl mt-4"
           >
             <Text className="text-bg_primary font-poppins_reg">Sign Up</Text>
