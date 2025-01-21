@@ -4,7 +4,6 @@ import {
   Pressable,
   Image,
   TextInput,
-  TouchableOpacity,
   Linking,
   Alert,
 } from "react-native";
