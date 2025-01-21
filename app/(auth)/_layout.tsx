@@ -21,6 +21,12 @@ export default function LandingLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="verification"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }

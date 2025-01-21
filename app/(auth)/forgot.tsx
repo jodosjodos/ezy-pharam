@@ -12,6 +12,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { router } from "expo-router";
 const ForgotPasswordPage = () => {
   const [message, setMessage] = useState("");
   const [selected, setSelected] = useState<string>("email");
@@ -21,6 +22,7 @@ const ForgotPasswordPage = () => {
     // Placeholder for your API call to send the reset link
     if (email_phone) {
       setMessage("Password reset link sent to your email!");
+      router.push("/(auth)/verification");
     } else {
       setMessage("Please enter a valid email.");
     }
@@ -125,12 +127,14 @@ const ForgotPasswordPage = () => {
             {message}
           </Text>
         ) : null}
-        <TouchableOpacity
-          className="w-full p-4 bg-blue-600 rounded-lg items-center mb-3"
+        <Pressable
           onPress={handleSendResetLink}
+          className="bg_primary py-[4%] px-[28%] border border-bg_primary bg-bg_primary rounded-3xl my-4 w-full"
         >
-          <Text className="text-white text-base font-bold">Submit</Text>
-        </TouchableOpacity>
+          <Text className="text-white  font-poppins_bold text-center">
+            Submit
+          </Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
