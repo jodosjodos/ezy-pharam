@@ -1,25 +1,21 @@
 import { images } from "@/constants";
 import { handleBack } from "@/utils";
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  Pressable,
-  Image,
-} from "react-native";
+import { View, Text, TextInput, Pressable, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Fontisto from "@expo/vector-icons/Fontisto";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { router } from "expo-router";
+import { useResetValue } from "@/store";
 const ForgotPasswordPage = () => {
   const [message, setMessage] = useState("");
   const [selected, setSelected] = useState<string>("email");
   const [email_phone, setEmail_phone] = useState<string>("");
-
+  const setResetValue = useResetValue.use.setOption();
   const handleSendResetLink = () => {
     // Placeholder for your API call to send the reset link
     if (email_phone) {
+      setResetValue(email_phone);
       setMessage("Password reset link sent to your email!");
       router.push("/(auth)/verification");
     } else {

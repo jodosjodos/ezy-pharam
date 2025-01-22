@@ -1,5 +1,6 @@
 import { images } from "@/constants";
-import { handleBack } from "@/utils";
+import { useResetValue } from "@/store";
+import { handleBack, maskSensitiveInfo } from "@/utils";
 import { router } from "expo-router";
 import React, { useState } from "react";
 import {
@@ -17,7 +18,7 @@ const VerificationPage = () => {
   //TODO: show real number  or emails received and handle state
   const [code, setCode] = useState(["", "", "", ""]);
   const [currentInput, setCurrentInput] = useState(0);
-
+  const resetValue = useResetValue.use.option();
   const handleCodeChange = (text: string, index: number) => {
     const newCode = [...code];
     newCode[index] = text;
@@ -32,7 +33,7 @@ const VerificationPage = () => {
   const handleVerify = () => {
     console.log("Verification Code:", code.join(""));
     // Add your verification logic here
-    router.push("/(auth)/newpassword")
+    router.push("/(auth)/newpassword");
   };
 
   const handleResendCode = () => {
@@ -59,7 +60,9 @@ const VerificationPage = () => {
           </Text>
           <Text className="text-base text-[#A1ABB0] mb-5 text-center">
             Enter code that we have sent to your number{" "}
-            <Text className="font-poppins_bold text-primary">08528188***</Text>
+            <Text className="font-poppins_bold text-primary">
+              {maskSensitiveInfo(resetValue)}
+            </Text>
           </Text>
 
           {/* Input Boxes */}
