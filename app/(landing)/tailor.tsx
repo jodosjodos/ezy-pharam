@@ -1,21 +1,16 @@
 import { images } from "@/constants";
 import { Link, router } from "expo-router";
-import {
-  Image,
-  Pressable,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { handleBack } from "@/utils";
 import RadioGroupComponent from "@/components/Radio-Group";
+import { AccountTypeEnum } from "@/enums";
 export default function Tailor() {
   const roles = [
-    { id: "1", label: 'Patient', value: 'patient' },
-    { id: "2", label: 'Hospital', value: 'hospital' },
-    { id: "3", label: 'Pharmacy', value: 'pharmacy' },
+    { id: "1", label: "Patient", value: AccountTypeEnum.PATIENT },
+    { id: "2", label: "Hospital", value: AccountTypeEnum.HOSPITAL },
+    { id: "3", label: "Pharmacy", value: AccountTypeEnum.PHARMACY },
   ];
   const handleNavigation = () => {
     router.replace("/(landing)/started");
@@ -47,7 +42,7 @@ export default function Tailor() {
           <Text className="text-[#A1A8B0] text-center px-[20%] font-poppins_reg">
             To provide with good experience , please select your role below
           </Text>
-          <RadioGroupComponent roles={roles}/>
+          <RadioGroupComponent roles={roles} />
         </View>
 
         <TouchableOpacity

@@ -17,6 +17,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import CheckBox from "expo-checkbox";
 import { Link, router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { useAccountTypeStore } from "@/store";
 const LoginPage = () => {
   const [email_phone, setEmail_phone] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -31,6 +32,8 @@ const LoginPage = () => {
       Alert.alert(`Don't know how to open this URL: ${url}`);
     }
   };
+  const accountType = useAccountTypeStore.use.account();
+
   //TODO:style checkbox and  then add sign up button
   return (
     <SafeAreaView className="bg-white flex-1">
@@ -148,7 +151,12 @@ const LoginPage = () => {
                 onPress={() => setShowPassword(!showPassword)}
               />
             </View>
-            <Text className="font-poppins_req text-bg_primary self-end " onPress={()=>router.push("/(auth)/forgot")}>Forgot Password ?</Text>
+            <Text
+              className="font-poppins_req text-bg_primary self-end "
+              onPress={() => router.push("/(auth)/forgot")}
+            >
+              Forgot Password ?
+            </Text>
           </View>
         </View>
         <View className="flex flex-row items-center space-x-[3%] px-[2%]">
