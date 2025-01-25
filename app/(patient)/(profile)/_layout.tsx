@@ -1,8 +1,8 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { Stack } from "expo-router";
 
 const ProfileLayout = () => {
+  //todo: do payment method page and my saved 
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
