@@ -4,10 +4,6 @@ import { Tabs } from "expo-router";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Foundation from '@expo/vector-icons/Foundation';
 const Layout = () => {
-  const account = useAccountTypeStore.use.account();
-  console.log("====================================");
-  console.log(account);
-  console.log("====================================");
   return (
     <Tabs>
       <Tabs.Screen
@@ -37,7 +33,7 @@ const Layout = () => {
           <Ionicons name="notifications-outline" size={size} color={color} />
         ),
       }} />
-      <Tabs.Screen name="profile" options={{
+      <Tabs.Screen name="(profile)" options={{
         title: "Profile",
         headerShown: false,
         tabBarIcon: ({ color, size }) => (
