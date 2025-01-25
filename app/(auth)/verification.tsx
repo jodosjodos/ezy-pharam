@@ -15,7 +15,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const VerificationPage = () => {
-  //TODO: show real number  or emails received and handle state
   const [code, setCode] = useState(["", "", "", ""]);
   const [currentInput, setCurrentInput] = useState(0);
   const resetValue = useResetValue.use.option();

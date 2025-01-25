@@ -20,7 +20,6 @@ const ResetPasswordPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
-  //TODO:not well , improve it
   const handlePasswordReset = () => {
     if (password === confirmPassword && password.length >= 8) {
       setModalVisible(true);
@@ -107,7 +106,7 @@ const ResetPasswordPage = () => {
             </Pressable>
           </View>
           <CheckModal
-          setLogout={()=>{}}
+            setLogout={() => {}}
             image={images?.Done}
             title="Success"
             subTitle="Your password has been reset successfully."
