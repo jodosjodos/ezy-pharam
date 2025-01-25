@@ -13,6 +13,7 @@ import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { router } from "expo-router";
 import CheckModal from "@/components/Check-model";
+import { handleBack } from "@/utils";
 
 const ResetPasswordPage = () => {
   const [password, setPassword] = useState("");
@@ -33,7 +34,7 @@ const ResetPasswordPage = () => {
       <KeyboardAvoidingView behavior="padding" className="flex-1">
         <View className="flex-1 px-6 relative">
           {/* Header */}
-          <Pressable onPress={() => console.log("Back Pressed")}>
+          <Pressable onPress={handleBack}>
             <Image source={images?.Back} />
           </Pressable>
 

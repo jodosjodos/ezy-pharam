@@ -1,6 +1,7 @@
 import { Profile } from "./images.js";
 
 export const ProfileData = {
+  username:"john",
   fullName: "John Doe",
   email: "johndoe@gmail.com",
   createdAt: "2021",
