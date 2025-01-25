@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  FlatList,
-  Pressable,
-} from "react-native";
+import { View, Text, FlatList, Pressable } from "react-native";
 import { Entypo, FontAwesome } from "@expo/vector-icons";
 import { Href, router } from "expo-router";
 
@@ -16,14 +11,25 @@ const menuItems = [
   { id: "5", title: "Logout", icon: "sign-out" },
 ];
 
-export const MenuList = () => {
+export const MenuList = ({
+  setModalVisible,
+  setIsLogout,
+}: {
+  setModalVisible: (value: boolean) => void;
+  setIsLogout: (value: boolean) => void;
+}) => {
   const handleNavigation = (item: {
     id: string;
     title: string;
     icon: string;
     to: Href<string | object>;
   }) => {
-    router.push(item.to);
+    if (item.title === "Logout") {
+      setModalVisible(true);
+      setIsLogout(true);
+    } else {
+      router.push(item.to);
+    }
   };
   const renderItem = ({ item }: any) => (
     <Pressable

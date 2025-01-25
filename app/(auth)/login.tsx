@@ -35,9 +35,6 @@ const LoginPage = () => {
   };
   const accountType = useAccountTypeStore.use.account();
   const handleLogin = () => {
-    console.log("====================================");
-    console.log(accountType);
-    console.log("====================================");
     if (accountType === AccountTypeEnum.PATIENT) {
       router.push("/(patient)/home");
     } else if (

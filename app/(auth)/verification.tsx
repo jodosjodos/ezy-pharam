@@ -31,7 +31,6 @@ const VerificationPage = () => {
   };
 
   const handleVerify = () => {
-    console.log("Verification Code:", code.join(""));
     // Add your verification logic here
     router.push("/(auth)/newpassword");
   };

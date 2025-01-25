@@ -7,4 +7,5 @@ import Pharma from "../assets/images/pharam.png"
 import Forgot from "../assets/images/forgot.png"
 import Done from "../assets/images/done.png"
 import Profile from "../assets/images/profile.png"
-export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile}
+import Logout from "../assets/images/logout.png"
+export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile,Logout}
