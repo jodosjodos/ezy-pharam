@@ -18,6 +18,7 @@ import CheckBox from "expo-checkbox";
 import { Link, router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { useAccountTypeStore } from "@/store";
+import { AccountTypeEnum } from "@/enums";
 const LoginPage = () => {
   const [email_phone, setEmail_phone] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -33,8 +34,19 @@ const LoginPage = () => {
     }
   };
   const accountType = useAccountTypeStore.use.account();
-
-  //TODO:style checkbox and  then add sign up button
+  const handleLogin = () => {
+    console.log("====================================");
+    console.log(accountType);
+    console.log("====================================");
+    if (accountType === AccountTypeEnum.PATIENT) {
+      router.push("/(patient)/home");
+    } else if (
+      accountType === AccountTypeEnum.HOSPITAL ||
+      accountType === AccountTypeEnum.PHARMACY
+    ) {
+      router.push("/(hospital)");
+    }
+  };
   return (
     <SafeAreaView className="bg-white flex-1">
       <View className="flex flex-row">
@@ -193,7 +205,7 @@ const LoginPage = () => {
         </View>
         <View className="flex flex-col space-y-5">
           <Pressable
-            onPress={() => router.push("/(auth)/signup")}
+            onPress={handleLogin}
             className="bg_primary py-[4%] px-[28%] border border-bg_primary bg-bg_primary rounded-3xl mt-4"
           >
             <Text className="text-white  font-poppins_bold text-center">

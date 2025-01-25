@@ -9,7 +9,7 @@ router.push("/(landing)/doctor")
   }
   return (
     <SafeAreaView className="bg-white">
-      <Link href="/(auth)/signup" className="text-[#A1A8B0] self-end pr-[5%] text-md" >Skip</Link>
+      <Link href="/(auth)/login" className="text-[#A1A8B0] self-end pr-[5%] text-md" >Skip</Link>
       <View className="h-full w-[100%] flex flex-col items-center justify-center ">
         <Image
           resizeMethod="auto"

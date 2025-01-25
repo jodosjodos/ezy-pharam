@@ -24,7 +24,7 @@ export default function Tailor() {
         >
           <Image source={images?.Back} />
         </Pressable>
-        <Link href="/(auth)/signup" className="text-[#A1A8B0]  pr-[5%] text-md">
+        <Link href="/(auth)/login" className="text-[#A1A8B0]  pr-[5%] text-md">
           Skip
         </Link>
       </View>

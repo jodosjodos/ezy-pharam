@@ -1,18 +1,23 @@
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
-import {Poppins_400Regular, Poppins_700Bold} from "@expo-google-fonts/poppins"
+import {
+  Poppins_400Regular,
+  Poppins_700Bold,
+} from "@expo-google-fonts/poppins";
 import { useEffect } from "react";
 export default function RootLayout() {
-  const [fontsLoaded,fontsErrors]=useFonts({
-    Poppins_400Regular,Poppins_700Bold
-  })
-useEffect(()=>{
-  if(fontsLoaded || fontsErrors){
-    SplashScreen.hideAsync()
-    if(fontsErrors){
-      console.error("Fonts not loaded")
-  }}
-})
+  const [fontsLoaded, fontsErrors] = useFonts({
+    Poppins_400Regular,
+    Poppins_700Bold,
+  });
+  useEffect(() => {
+    if (fontsLoaded || fontsErrors) {
+      SplashScreen.hideAsync();
+      if (fontsErrors) {
+        console.error("Fonts not loaded");
+      }
+    }
+  });
   return (
     <Stack>
       <Stack.Screen
@@ -21,12 +26,20 @@ useEffect(()=>{
           headerShown: false,
         }}
       />
-      <Stack.Screen name="(landing)" options={{
-        headerShown: false
-      }}/>
-        <Stack.Screen name="(auth)" options={{
-        headerShown: false
-      }}/>
+      <Stack.Screen
+        name="(landing)"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="(auth)"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen name="(patient)" options={{ headerShown: false }} />
+      <Stack.Screen name="(hospital)" options={{ headerShown: false }} />
     </Stack>
   );
 }

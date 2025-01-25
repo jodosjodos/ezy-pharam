@@ -16,7 +16,7 @@ export default function Index() {
          <Image source={images?.Back} />
         </Pressable>
         <Link
-          href="/(auth)/signup"
+          href="/(auth)/login"
           className="text-[#A1A8B0]  pr-[5%] text-md"
         >
           Skip
