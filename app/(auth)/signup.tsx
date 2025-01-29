@@ -33,6 +33,7 @@ const SignupPage = () => {
       Alert.alert(`Don't know how to open this URL: ${url}`);
     }
   };
+  
   return (
     <SafeAreaView className="bg-white flex-1">
       <View className="flex flex-row">
