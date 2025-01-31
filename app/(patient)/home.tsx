@@ -1,8 +1,15 @@
-import { View, Text, TextInput, Pressable, Image } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Pressable,
+  Image,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { EvilIcons, Ionicons } from "@expo/vector-icons";
+import { EvilIcons } from "@expo/vector-icons";
 import { images } from "@/constants";
+import { SVGComponent } from "@/components/Svg-Component";
 
 const Home = () => {
   const [search, setSearch] = useState<string | undefined>("");
@@ -49,6 +56,20 @@ const Home = () => {
             </Pressable>
             <Text className="font-poppins_reg text-[#A1A8B0]">Hospitals</Text>
           </View>
+        </View>
+        <View className="flex-row items-center p-3 bg-line-13 rounded-2xl shadow-md">
+          {/* Text Content */}
+          <View className="flex-1 pr-4">
+            <Text className="text-lg font-poppins_bold text-[#101623]">
+              Early protection for your family health
+            </Text>
+            <Pressable className="mt-3 bg-bg_primary rounded-full px-4 py-2 self-start">
+              <Text className="text-white font-poppins_reg">Learn more</Text>
+            </Pressable>
+          </View>
+
+          {/* Circular Graphic */}
+          <SVGComponent />
         </View>
       </View>
     </SafeAreaView>

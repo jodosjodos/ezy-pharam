@@ -10,4 +10,5 @@ import Profile from "../assets/images/profile.png"
 import Logout from "../assets/images/logout.png"
 import HospitalIcon from "../assets/images/Hospital.png"
 import DoctorIcon from "../assets/images/doctorLog.png"
-export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile,Logout,HospitalIcon,DoctorIcon}
+import HomeSvg from "../assets/images/home.png"
+export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile,Logout,HospitalIcon,DoctorIcon,HomeSvg}
