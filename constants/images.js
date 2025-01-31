@@ -8,4 +8,6 @@ import Forgot from "../assets/images/forgot.png"
 import Done from "../assets/images/done.png"
 import Profile from "../assets/images/profile.png"
 import Logout from "../assets/images/logout.png"
-export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile,Logout}
+import HospitalIcon from "../assets/images/Hospital.png"
+import DoctorIcon from "../assets/images/doctorLog.png"
+export {Woman,Doctor,Location,Back,Tailor,Pharma,Forgot,Done,Profile,Logout,HospitalIcon,DoctorIcon}
