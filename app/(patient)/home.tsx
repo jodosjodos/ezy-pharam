@@ -80,7 +80,7 @@ const Home = () => {
                 See all
               </Link>
             </View>
-            <ScrollView  horizontal className="gap-x-4  flex flex-row p-4  bg-blue-400" >
+            <ScrollView  horizontal className="gap-x-4  flex flex-row p-4 " >
               {hospitals.map((hospital) => (
                 <HospitalCard hospital={hospital} />
               ))}
