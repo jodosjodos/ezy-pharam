@@ -72,7 +72,7 @@ export const hospitals: Hospital[] = [
     id: 3,
     name: "Rwanda Military Hospital",
     service: "Orthopedics",
-    location: "Kanombe, Kigali",
+    location: "Kanombe",
     rating: 4.0,
     image: Faisal,
   },

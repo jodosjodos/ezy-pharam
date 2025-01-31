@@ -23,7 +23,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital }) => {
         <Text className="text-[#ADADAD]">{hospital.service}</Text>
       </View>
 
-      <View className="flex flex-row items-center  gap-x-4 bg-red-500">
+      <View className="flex flex-row items-center  gap-x-4 bg-red-500 w-fit">
         <View className="flex flex-row items-center bg-[#E8F3F1] p-1 rounded-md">
           <Image source={images.Star} className="w-4 h-4" />
           <Text className="text-bg_primary"> {hospital.rating}</Text>
