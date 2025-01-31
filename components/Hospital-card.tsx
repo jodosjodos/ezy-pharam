@@ -6,7 +6,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 interface HospitalCardProps {
   hospital: Hospital;
 }
-
+//todo: fix overflow of text
 export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital }) => {
   return (
     <View className=" p-3 rounded-lg shadow-md  border-[1.5px] border-[#E8F3F1] flex flex-col gap-y-2 justify-around  w-[200px]" key={hospital.id}>
