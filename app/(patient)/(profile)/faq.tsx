@@ -4,7 +4,7 @@ import { Entypo, FontAwesome } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { View, Text, Pressable, ScrollView, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-//TODO search functionality
+//TODO search functionality 
 const FAQ = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
