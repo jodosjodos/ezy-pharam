@@ -76,14 +76,20 @@ const Home = () => {
           <View className="flex-1 p-2 flex flex-col  gap-y-4">
             <View className="flex flex-row items-center justify-between">
               <Text className="font-poppins_bold">Top Hospitals</Text>
-              <Link href="/(auth)/login" className="text-bg_primary">
+              <Link href="/(patient)/hospitals" className="text-bg_primary">
                 See all
               </Link>
             </View>
-            <ScrollView  horizontal className="gap-x-4  flex flex-row p-4 " >
-              {hospitals.map((hospital) => (
-                <HospitalCard hospital={hospital} />
-              ))}
+            <ScrollView
+              showsHorizontalScrollIndicator={false}
+              horizontal
+              className="  p-4"
+            >
+              <View className="flex flex-row space-x-4">
+                {hospitals.map((hospital) => (
+                  <HospitalCard key={hospital.id} hospital={hospital} />
+                ))}
+              </View>
             </ScrollView>
           </View>
         </View>

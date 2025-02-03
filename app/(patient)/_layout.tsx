@@ -3,6 +3,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import { Tabs } from "expo-router";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Foundation from '@expo/vector-icons/Foundation';
+import { FontAwesome5 } from "@expo/vector-icons";
 const Layout = () => {
   return (
     <Tabs>
@@ -17,12 +18,12 @@ const Layout = () => {
         }}
       />
       <Tabs.Screen
-        name="pharmacy"
+        name="hospitals"
         options={{
-          title: "Pharmacy",
+          title: "Hospitals",
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="medicinebox" size={size} color={color} />
+            <FontAwesome5 name="hospital" size={size} color={color} />
           ),
         }}
       />
