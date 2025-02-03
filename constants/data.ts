@@ -1,5 +1,18 @@
 import { Hospital } from "@/interface/hospital.js";
-import { Profile, Faisal, Kanombe, ArticleImg, ArticleImg2 } from "./images.js";
+import {
+  Profile,
+  Faisal,
+  Kanombe,
+  ArticleImg,
+  ArticleImg2,
+  General,
+  Lungs,
+  Dentist,
+  Psychiatrist,
+  Gynecologist,
+  Surgeon,
+  Cardiologist,
+} from "./images.js";
 import { Article } from "@/interface/article.js";
 
 export const ProfileData = {
@@ -290,4 +303,13 @@ export const topArticles: Article[] = [
     image: ArticleImg2,
     title: "The Best Superfoods for a Stronger Immune System",
   },
+];
+export const services = [
+  { id: "1", title: "General", image: General },
+  { id: "2", title: "Lungs Specialist", image: Lungs },
+  { id: "3", title: "Dentist", image: Dentist },
+  { id: "4", title: "Psychiatrist", image: Psychiatrist },
+  { id: "5", title: "Gynecologist", image: Gynecologist },
+  { id: "6", title: "Surgeon", image: Surgeon },
+  { id: "6", title: "Cardiologist", image: Cardiologist },
 ];
