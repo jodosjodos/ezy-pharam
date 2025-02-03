@@ -9,7 +9,7 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { EvilIcons } from "@expo/vector-icons";
-import {  images, topArticles, topHospitals } from "@/constants";
+import { images, topArticles, topHospitals } from "@/constants";
 import { SVGComponent } from "@/components/Svg-Component";
 import { Link } from "expo-router";
 import { HospitalCard } from "@/components/Hospital-card";
@@ -84,7 +84,7 @@ const Home = () => {
             <ScrollView
               showsHorizontalScrollIndicator={false}
               horizontal
-              className="  p-4"
+              className="  py-4 bg-red-50\"
             >
               <View className="flex flex-row space-x-4">
                 {topHospitals.map((hospital) => (
@@ -100,11 +100,10 @@ const Home = () => {
                 See all
               </Link>
             </View>
-            <ScrollView
-            >
+            <ScrollView>
               <View className="flex flex-col">
                 {topArticles.map((article) => (
-                  <ArticleCard key ={article.id} article={article} />
+                  <ArticleCard key={article.id} article={article} />
                 ))}
               </View>
             </ScrollView>
