@@ -18,7 +18,7 @@ const Layout = () => {
         }}
       />
       <Tabs.Screen
-        name="hospitals"
+        name="(hospital)"
         options={{
           title: "Hospitals",
           headerShown: false,
