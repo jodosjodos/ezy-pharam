@@ -2,7 +2,6 @@ import { HospitalCard } from "@/components/Hospital-card";
 import { HospitalCard2 } from "@/components/Hospital-card2";
 import { hospitals, images } from "@/constants";
 import { handleBack } from "@/utils";
-import { FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { Image, Pressable } from "react-native";
