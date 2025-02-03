@@ -16,6 +16,7 @@ import Star from "../assets/images/Star.png";
 import Kanombe from "../assets/images/kanombe.png"
 import ArticleImg from "../assets/images/article.png"
 import ArticleImg2 from "../assets/images/article2.png"
+
 export {
   Woman,
   Doctor,

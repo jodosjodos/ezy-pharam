@@ -60,6 +60,8 @@ export const hospitals: Hospital[] = [
     location: "Kigali",
     rating: 3.7,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 2,
@@ -68,6 +70,8 @@ export const hospitals: Hospital[] = [
     location: "Kigali",
     rating: 4.2,
     image: Kanombe,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 3,
@@ -76,6 +80,8 @@ export const hospitals: Hospital[] = [
     location: "Kanombe",
     rating: 4.0,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 4,
@@ -84,7 +90,8 @@ export const hospitals: Hospital[] = [
     location: "Kigali",
     rating: 3.8,
     image: Kanombe,
- 
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 5,
@@ -93,6 +100,8 @@ export const hospitals: Hospital[] = [
     location: "Burera",
     rating: 4.5,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 6,
@@ -101,7 +110,8 @@ export const hospitals: Hospital[] = [
     location: "Kigali",
     rating: 4.1,
     image: Kanombe,
-  
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 7,
@@ -110,6 +120,8 @@ export const hospitals: Hospital[] = [
     location: "Kayonza",
     rating: 4.0,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 8,
@@ -118,7 +130,8 @@ export const hospitals: Hospital[] = [
     location: "Muhanga",
     rating: 3.9,
     image: Kanombe,
-  
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 9,
@@ -127,6 +140,8 @@ export const hospitals: Hospital[] = [
     location: "Musanze",
     rating: 4.3,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 10,
@@ -135,7 +150,8 @@ export const hospitals: Hospital[] = [
     location: "Gasabo, Kigali",
     rating: 3.6,
     image: Kanombe,
-  
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 11,
@@ -144,6 +160,8 @@ export const hospitals: Hospital[] = [
     location: "Gakenke",
     rating: 4.0,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
 ];
 export const topHospitals: Hospital[] = [
@@ -154,6 +172,8 @@ export const topHospitals: Hospital[] = [
     location: "Kigali",
     rating: 3.7,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 2,
@@ -162,6 +182,8 @@ export const topHospitals: Hospital[] = [
     location: "Kigali",
     rating: 4.2,
     image: Kanombe,
+    openHours: "24h",
+    number: "0788123200",
   },
   {
     id: 3,
@@ -170,6 +192,8 @@ export const topHospitals: Hospital[] = [
     location: "Kanombe",
     rating: 4.0,
     image: Faisal,
+    openHours: "24h",
+    number: "0788123200",
   },
 ];
 export const articles: Article[] = [

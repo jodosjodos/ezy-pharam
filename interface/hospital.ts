@@ -6,5 +6,7 @@ export interface Hospital {
   service: string;
   location: string;
   rating: number;
-  image:ImageSourcePropType
+  image: ImageSourcePropType;
+  openHours: string;
+  number:string
 }
