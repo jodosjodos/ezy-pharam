@@ -25,11 +25,10 @@ const Hospitals = () => {
       </View>
       <ScrollView>
         <View className="px-5">
-        {hospitals.map((hospital) => (
-          <HospitalCard2 key={hospital.id} hospital={hospital} />
-        ))}
+          {hospitals.map((hospital) => (
+            <HospitalCard2 key={hospital.id} hospital={hospital} />
+          ))}
         </View>
-       
       </ScrollView>
     </SafeAreaView>
   );

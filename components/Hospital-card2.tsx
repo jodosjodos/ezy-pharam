@@ -3,13 +3,15 @@ import { Hospital } from "@/interface";
 import React from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
+import { router } from "expo-router";
 interface HospitalCardProps {
   hospital: Hospital;
 }
 export const HospitalCard2: React.FC<HospitalCardProps> = ({ hospital }) => {
   return (
-    <Pressable onPress={()=>console.log("okay")
-    }>
+    <Pressable
+      onPress={() => router.push(`/(patient)/(hospital)/${hospital.id}`)}
+    >
       <View className=" p-3 rounded-lg shadow-md  border-[1.5px] border-[#E8F3F1] flex flex-row gap-x-2 justify-around   my-2 ">
         <Image
           source={hospital.image}
