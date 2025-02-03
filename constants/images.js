@@ -15,6 +15,7 @@ import Faisal from "../assets/images/faisal.png";
 import Star from "../assets/images/Star.png";
 import Kanombe from "../assets/images/kanombe.png"
 import ArticleImg from "../assets/images/article.png"
+import ArticleImg2 from "../assets/images/article2.png"
 export {
   Woman,
   Doctor,
@@ -31,5 +32,5 @@ export {
   HomeSvg,
   Faisal,
   Star,
-  Kanombe,ArticleImg
+  Kanombe,ArticleImg,ArticleImg2
 };
