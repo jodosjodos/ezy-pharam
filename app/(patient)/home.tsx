@@ -16,6 +16,7 @@ import { HospitalCard } from "@/components/Hospital-card";
 import ArticleCard from "@/components/Article-card";
 
 const Home = () => {
+  //TODO: finish profile
   const [search, setSearch] = useState<string | undefined>("");
   return (
     <SafeAreaView className="bg-white flex-1">
