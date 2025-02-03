@@ -13,6 +13,7 @@ import DoctorIcon from "../assets/images/doctorLog.png";
 import HomeSvg from "../assets/images/home.png";
 import Faisal from "../assets/images/faisal.png";
 import Star from "../assets/images/Star.png";
+import Kanombe from "../assets/images/kanombe.png"
 export {
   Woman,
   Doctor,
@@ -29,4 +30,5 @@ export {
   HomeSvg,
   Faisal,
   Star,
+  Kanombe
 };

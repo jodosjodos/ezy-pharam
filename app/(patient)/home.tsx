@@ -95,7 +95,7 @@ const Home = () => {
           <View className="flex-1 p-2 flex flex-col  gap-y-4">
             <View className="flex flex-row items-center justify-between">
               <Text className="font-poppins_bold">Top articles</Text>
-              <Link href="/(patient)/hospitals" className="text-bg_primary">
+              <Link href="/(patient)/articles" className="text-bg_primary">
                 See all
               </Link>
             </View>
