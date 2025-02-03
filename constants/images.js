@@ -13,10 +13,16 @@ import DoctorIcon from "../assets/images/doctorLog.png";
 import HomeSvg from "../assets/images/home.png";
 import Faisal from "../assets/images/faisal.png";
 import Star from "../assets/images/Star.png";
-import Kanombe from "../assets/images/kanombe.png"
-import ArticleImg from "../assets/images/article.png"
-import ArticleImg2 from "../assets/images/article2.png"
-
+import Kanombe from "../assets/images/kanombe.png";
+import ArticleImg from "../assets/images/article.png";
+import ArticleImg2 from "../assets/images/article2.png";
+import General from "../assets/images/general.png";
+import Lungs from "../assets/images/lungs.png";
+import Dentist from "../assets/images/dentist.png";
+import Psychiatrist from "../assets/images/psychiatrist.png";
+import Gynecologist from "../assets/images/covid.png";
+import Surgeon from "../assets/images/surgeon.png";
+import Cardiologist from "../assets/images/cardio.png";
 export {
   Woman,
   Doctor,
@@ -33,5 +39,14 @@ export {
   HomeSvg,
   Faisal,
   Star,
-  Kanombe,ArticleImg,ArticleImg2
+  Kanombe,
+  ArticleImg,
+  ArticleImg2,
+  General,
+  Lungs,
+  Dentist,
+  Psychiatrist,
+  Gynecologist,
+  Surgeon,
+  Cardiologist,
 };
