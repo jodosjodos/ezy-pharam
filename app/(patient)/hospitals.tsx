@@ -1,4 +1,5 @@
 import { HospitalCard } from "@/components/Hospital-card";
+import { HospitalCard2 } from "@/components/Hospital-card2";
 import { hospitals, images } from "@/constants";
 import { handleBack } from "@/utils";
 import { FontAwesome } from "@expo/vector-icons";
@@ -23,9 +24,12 @@ const Hospitals = () => {
         </Text>
       </View>
       <ScrollView>
+        <View className="px-5">
         {hospitals.map((hospital) => (
-          <HospitalCard key={hospital.id} hospital={hospital} />
+          <HospitalCard2 key={hospital.id} hospital={hospital} />
         ))}
+        </View>
+       
       </ScrollView>
     </SafeAreaView>
   );
