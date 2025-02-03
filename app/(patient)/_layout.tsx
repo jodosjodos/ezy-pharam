@@ -1,9 +1,9 @@
 import { useAccountTypeStore } from "@/store";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { Tabs } from "expo-router";
-import Ionicons from '@expo/vector-icons/Ionicons';
-import Foundation from '@expo/vector-icons/Foundation';
-import { FontAwesome5 } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import Foundation from "@expo/vector-icons/Foundation";
+import { FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 const Layout = () => {
   return (
     <Tabs>
@@ -27,20 +27,37 @@ const Layout = () => {
           ),
         }}
       />
-      <Tabs.Screen name="notification" options={{
-        title: "Notification",
-        headerShown: false,
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="notifications-outline" size={size} color={color} />
-        ),
-      }} />
-      <Tabs.Screen name="(profile)" options={{
-        title: "Profile",
-        headerShown: false,
-        tabBarIcon: ({ color, size }) => (
-          <AntDesign name="user" size={size} color={color} />
-        ),
-      }}/>
+      <Tabs.Screen
+        name="articles"
+        options={{
+          title: "articles",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="article" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="notification"
+        options={{
+          title: "Notification",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="notifications-outline" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="(profile)"
+        options={{
+          title: "Profile",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="user" size={size} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 };

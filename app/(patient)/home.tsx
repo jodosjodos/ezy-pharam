@@ -92,6 +92,25 @@ const Home = () => {
               </View>
             </ScrollView>
           </View>
+          <View className="flex-1 p-2 flex flex-col  gap-y-4">
+            <View className="flex flex-row items-center justify-between">
+              <Text className="font-poppins_bold">Top articles</Text>
+              <Link href="/(patient)/hospitals" className="text-bg_primary">
+                See all
+              </Link>
+            </View>
+            <ScrollView
+              showsHorizontalScrollIndicator={false}
+              horizontal
+              className="  p-4"
+            >
+              <View className="flex flex-row space-x-4">
+                {hospitals.map((hospital) => (
+                  <HospitalCard key ={hospital.id} hospital={hospital} />
+                ))}
+              </View>
+            </ScrollView>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
