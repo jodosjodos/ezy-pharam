@@ -20,7 +20,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital }) => {
           {hospital.name}
         </Text>
 
-        <Text className="text-[#ADADAD]">{hospital.service}</Text>
+        <Text className="text-text-primary">{hospital.service}</Text>
       </View>
 
       <View className="flex flex-row items-center  gap-x-4">
@@ -30,7 +30,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital }) => {
         </View>
         <View className="flex flex-row items-center ">
           <Entypo name="location-pin" size={20} color="#ADADAD" />
-          <Text className="text-[#ADADAD]">{hospital.location}</Text>
+          <Text className="text-text-primary">{hospital.location}</Text>
         </View>
       </View>
     </View>

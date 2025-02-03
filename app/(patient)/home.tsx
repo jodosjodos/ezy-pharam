@@ -9,10 +9,11 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { EvilIcons } from "@expo/vector-icons";
-import { hospitals, images } from "@/constants";
+import { articles, hospitals, images } from "@/constants";
 import { SVGComponent } from "@/components/Svg-Component";
 import { Link } from "expo-router";
 import { HospitalCard } from "@/components/Hospital-card";
+import ArticleCard from "@/components/Article-card";
 
 const Home = () => {
   const [search, setSearch] = useState<string | undefined>("");
@@ -94,19 +95,18 @@ const Home = () => {
           </View>
           <View className="flex-1 p-2 flex flex-col  gap-y-4">
             <View className="flex flex-row items-center justify-between">
-              <Text className="font-poppins_bold">Top articles</Text>
+              <Text className="font-poppins_bold">Health articles</Text>
               <Link href="/(patient)/articles" className="text-bg_primary">
                 See all
               </Link>
             </View>
             <ScrollView
-              showsHorizontalScrollIndicator={false}
-              horizontal
-              className="  p-4"
+            
+              className=""
             >
-              <View className="flex flex-row space-x-4">
-                {hospitals.map((hospital) => (
-                  <HospitalCard key ={hospital.id} hospital={hospital} />
+              <View className="flex flex-col  space-y-2">
+                {articles.map((article) => (
+                  <ArticleCard key ={article.id} article={article} />
                 ))}
               </View>
             </ScrollView>
